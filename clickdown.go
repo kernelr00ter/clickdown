@@ -168,5 +168,6 @@ func (cd *_ClickDown) CheckServer(endpoint string) (*_ServerMeta, error) {
 }
 
 func (cd *_ClickDown) Shutdown() error {
-	return cd.pool.Release()
+	cd.pool.Release()
+	return nil
 }
